@@ -1,0 +1,35 @@
+{
+  "market_sentiment": [
+    {
+      "name": "Bullish",
+      "vix": "<20",
+      "watch_indicator": ["%K", "%D", "adx_14", "upper_band", "fibonacci"],
+      "condition_description": [
+        {"Stochastic %K": "%K line above %D line"},
+        {"ADX 14": "ADX(14) > 15"},
+        {"Bollinger-Band": "Price hit the upper band"},
+        {"Fibonacci": "Price breaks above the 0.618 level"}
+      ]
+    },
+    {
+      "name": "Volatile",
+      "vix": ">=20, <30",
+      "watch_indicator": ["sma_50", "sma_100", "sma_200", "Volume", "macd_line", "signal_line"],
+      "condition_description": [
+        {"SMA": "Price breaks above the 200-day Simple Moving Average (SMA200)"},
+        {"Volume": "Above 1 million shares"},
+        {"MACD": "MACD line above Signal line"}
+      ]
+    },
+    {
+      "name": "Bearish",
+      "vix": ">=30",
+      "watch_indicator": ["rsi_14", "macd_histogram", "aroon_up", "aroon_down"],
+      "condition_description": [
+        {"RSI 14": "RSI(14) < 30"},
+        {"MACD Histogram": "MACD Histogram below zero"},
+        {"Aroon": "Aroon Up + Aroon Down < 100"}
+      ]
+    }
+  ]
+}

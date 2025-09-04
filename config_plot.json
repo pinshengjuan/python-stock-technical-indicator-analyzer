@@ -1,0 +1,161 @@
+{
+  "figure": {
+    "background": "white"
+  },
+  "tech_indicators": [
+    {
+      "name": "sma",
+      "periods": 50,
+      "plot": {
+        "active": true,
+        "add_price_chart": true,
+        "subplot_position": 1,
+        "h_ratio": 6,
+        "series": [
+          {"type": "line", "label": "SMA 50", "y_key": "sma_50", "color": "#808000", "legend": true, "mark_value": false}
+        ]
+      }
+    },
+    {
+      "name": "sma",
+      "periods": 100,
+      "plot": {
+        "active": true,
+        "add_price_chart": true,
+        "subplot_position": 1,
+        "h_ratio": 6,
+        "series": [
+          {"type": "line", "label": "SMA 100", "y_key": "sma_100", "color": "#ff0000", "legend": true, "mark_value": false}
+        ]
+      }
+    },
+    {
+      "name": "sma",
+      "periods": 200,
+      "plot": {
+        "active": true,
+        "add_price_chart": true,
+        "subplot_position": 1,
+        "h_ratio": 6,
+        "series": [
+          {"type": "line", "label": "SMA 200", "y_key": "sma_200", "color": "#7F00FF", "legend": true, "mark_value": false}
+        ]
+      }
+    },
+    {
+      "name": "volume",
+      "plot": {
+        "active": true,
+        "add_price_chart": false,
+        "subplot_position": 2,
+        "h_ratio": 2,
+        "series": [
+          {"type": "bar", "label": "Volume", "y_key": "Volume", "color": "black", "legend": false, "mark_value": true}
+        ]
+      }
+    },
+    {
+      "name": "rsi",
+      "periods": 14,
+      "overbought": 70,
+      "oversold": 30,
+      "plot": {
+        "active": true,
+        "add_price_chart": false,
+        "subplot_position": 3,
+        "h_ratio": 3,
+        "series": [
+          {"type": "line", "label": "RSI 14", "y_key": "rsi_14", "color": "#0000ff", "legend": true, "mark_value": true}
+        ]
+      }
+    },
+    {
+      "name": "adx",
+      "periods": 14,
+      "plot": {
+        "active": true,
+        "add_price_chart": false,
+        "subplot_position": 4,
+        "h_ratio": 3,
+        "series": [
+          {"type": "line", "label": "ADX", "y_key": "adx_14", "color": "#ffa500", "legend": false, "mark_value": true}
+        ]
+      }
+    },
+    {
+      "name": "macd",
+      "macd_periods": [12, 26, 9],
+      "plot": {
+        "active": true,
+        "add_price_chart": false,
+        "subplot_position": 5,
+        "h_ratio": 3,
+        "series": [
+          {"type": "line", "label": "MACD", "y_key": "macd_line", "color": "#ffa500", "legend": true, "mark_value": true},
+          {"type": "line", "label": "Signal", "y_key": "signal_line", "color": "#0000ff", "legend": true, "mark_value": true},
+          {"type": "bar", "label": "Histogram", "y_key": "macd_histogram", "color": "#808080", "legend": false, "mark_value": false}
+        ]
+      }
+    },
+    {
+      "name": "bollinger-bands",
+      "periods": 20,
+      "deviations": 2,
+      "plot": {
+        "active": true,
+        "add_price_chart": true,
+        "subplot_position": 6,
+        "h_ratio": 6,
+        "series": [
+          {"type": "line", "label": "Upper Band", "y_key": "upper_band", "color": "#ffa500", "legend": false, "mark_value": false},
+          {"type": "line", "label": "Middle Band", "y_key": "middle_band", "color": "#ffa500", "legend": false, "mark_value": false},
+          {"type": "line", "label": "Lower Band", "y_key": "lower_band", "color": "#ffa500", "legend": false, "mark_value": false}
+        ]
+      }
+    },
+    {
+      "name": "stochastic",
+      "stochastic_periods": [14, 3, 3],
+      "overbought": 80,
+      "oversold": 20,
+      "plot": {
+        "active": true,
+        "add_price_chart": false,
+        "subplot_position": 7,
+        "h_ratio": 3,
+        "series": [
+          {"type": "line", "label": "%K", "y_key": "%K", "color": "#e899c6", "legend": true, "mark_value": true},
+          {"type": "line", "label": "%D", "y_key": "%D", "color": "#325da8", "legend": true, "mark_value": true}
+        ]
+      }
+    },
+    {
+      "name": "aroon",
+      "periods": 14,
+      "plot": {
+        "active": true,
+        "add_price_chart": false,
+        "subplot_position": 8,
+        "h_ratio": 3,
+        "series": [
+          {"type": "line", "label": "aroon_up", "y_key": "aroon_up","color": "#00ff00","legend": true, "mark_value": true},
+          {"type": "line", "label": "aroon_down", "y_key": "aroon_down","color": "#ff0000","legend": true, "mark_value": true}
+        ]
+      }
+    },
+    {
+      "name": "fibonacci",
+      "ratios": [0, 0.382, 0.5, 0.618, 1.0, 1.38],
+      "periods": 90,
+      "plot": {
+        "active": true,
+        "add_price_chart": true,
+        "subplot_position": 1,
+        "h_ratio": 6,
+        "series": [
+          {"type": "fibonacci","label": "Fibonacci Levels","color": "#ffa500","legend": false, "mark_value": true}
+        ]
+      }
+    }
+  ]
+}
